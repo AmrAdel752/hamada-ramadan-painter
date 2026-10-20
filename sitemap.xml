@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://hamada-ramadan-painter.vercel.app/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/hero-salon-panels.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/parquet-room.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/corridor-lighting.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/gypsum-ceiling.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wood-door-varnish.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/parquet-balcony.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/arch-niche.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/stairs-paint.webp</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://hamada-ramadan-painter.vercel.app/video/apartment-tour.webp</video:thumbnail_loc>
+      <video:title>جولة في شقة بعد التشطيب - حماده رمضان نقاش مدينة نصر</video:title>
+      <video:description>جولة في شقة بعد التشطيب وتلميع الباركيه من شغل حماده رمضان، نقاش في مدينة نصر.</video:description>
+      <video:content_loc>https://hamada-ramadan-painter.vercel.app/video/apartment-tour.mp4</video:content_loc>
+    </video:video>
+  </url>
+</urlset>

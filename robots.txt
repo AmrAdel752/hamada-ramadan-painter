@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hamada-ramadan-painter.vercel.app/sitemap.xml
