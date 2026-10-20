@@ -488,7 +488,7 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصورة"><button type="button" aria-label="إغلاق"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button><img alt=""></div>
 
-<a class="fab" href="https://wa.me/201064684256" target="_blank" rel="noopener" aria-label="كلم حماده على واتساب"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+<a class="fab" id="waFab" href="https://wa.me/201064684256" target="_blank" rel="noopener" aria-label="كلم حماده على واتساب"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
 <div class="mbar"><a class="btn btn-line" href="tel:+201064684256"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>اتصال</a><a class="btn btn-wa" href="#book">احجز معاينة</a></div>
 
 <script>
@@ -503,11 +503,16 @@ const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
 document.querySelectorAll('.g').forEach(g=>g.onclick=()=>{const i=g.querySelector('img');lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')});
 lb.onclick=e=>{if(e.target!==lbi)lb.classList.remove('on')};
 addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
-// form -> whatsapp
+// whatsapp: every message from the site starts with a "from the website" line + a short code
+const WA='201064684256';
+const siteCode=()=>'W-'+Math.floor(1000+Math.random()*9000);
+const waURL=body=>'https://wa.me/'+WA+'?text='+encodeURIComponent('📌 رسالة من موقع حماده رمضان ('+siteCode()+')\n\n'+body);
+document.getElementById('waFab').addEventListener('click',e=>{e.preventDefault();
+  window.open(waURL('السلام عليكم يا أستاذ حماده، شفت موقعك على النت وعايز أستفسر عن معاينة.'),'_blank');});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
   const t=document.querySelector('input[name=t]:checked').value;
-  const msg=`السلام عليكم يا أستاذ حماده، عايز أحجز معاينة\nالاسم: ${n.value}\nالمنطقة: ${a.value}\nنوع الشغل: ${t}`+(d.value?`\nالتفاصيل: ${d.value}`:'');
-  window.open('https://wa.me/201064684256?text='+encodeURIComponent(msg),'_blank');});
+  const body=`السلام عليكم يا أستاذ حماده، شفت موقعك على النت وعايز أحجز معاينة.\nالاسم: ${n.value}\nالمنطقة: ${a.value}\nنوع الشغل: ${t}`+(d.value?`\nالتفاصيل: ${d.value}`:'');
+  window.open(waURL(body),'_blank');});
 </script>
 </body>
 </html>
