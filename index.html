@@ -304,6 +304,8 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
 .lb button{display:grid;place-items:center}.lb button .i{width:20px;height:20px}
 .mbar .ico{width:18px;height:18px}
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NHGCJK5K6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4NHGCJK5K6');</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -506,11 +508,15 @@ addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 // whatsapp: every message from the site starts with a "from the website" line + a short code
 const WA='201064684256';
 const waURL=body=>'https://wa.me/'+WA+'?text='+encodeURIComponent('📌 رسالة من موقع حماده رمضان\n\n'+body);
+const track=(name,params)=>{try{if(typeof gtag==='function')gtag('event',name,params)}catch(e){}};
+document.querySelectorAll('a[href^="tel:"]').forEach(el=>el.addEventListener('click',()=>track('call_click',{button_location:el.closest('.mbar')?'mobile_bar':'booking_section'})));
 document.getElementById('waFab').addEventListener('click',e=>{e.preventDefault();
+  track('whatsapp_click',{button_location:'floating_button'});
   window.open(waURL('السلام عليكم يا أستاذ حماده، شفت موقعك على النت وعايز أستفسر عن معاينة.'),'_blank');});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
   const t=document.querySelector('input[name=t]:checked').value;
   const body=`السلام عليكم يا أستاذ حماده، شفت موقعك على النت وعايز أحجز معاينة.\nالاسم: ${n.value}\nالمنطقة: ${a.value}\nنوع الشغل: ${t}`+(d.value?`\nالتفاصيل: ${d.value}`:'');
+  track('whatsapp_click',{button_location:'booking_form',service:t});
   window.open(waURL(body),'_blank');});
 </script>
 </body>
