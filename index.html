@@ -505,8 +505,7 @@ lb.onclick=e=>{if(e.target!==lbi)lb.classList.remove('on')};
 addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 // whatsapp: every message from the site starts with a "from the website" line + a short code
 const WA='201064684256';
-const siteCode=()=>'W-'+Math.floor(1000+Math.random()*9000);
-const waURL=body=>'https://wa.me/'+WA+'?text='+encodeURIComponent('📌 رسالة من موقع حماده رمضان ('+siteCode()+')\n\n'+body);
+const waURL=body=>'https://wa.me/'+WA+'?text='+encodeURIComponent('📌 رسالة من موقع حماده رمضان\n\n'+body);
 document.getElementById('waFab').addEventListener('click',e=>{e.preventDefault();
   window.open(waURL('السلام عليكم يا أستاذ حماده، شفت موقعك على النت وعايز أستفسر عن معاينة.'),'_blank');});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
