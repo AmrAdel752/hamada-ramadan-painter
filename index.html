@@ -93,6 +93,11 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(246,241,233,.88);bac
 header.nav.scrolled{border-color:var(--line);box-shadow:0 10px 30px -18px rgba(20,24,31,.25)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:12px}
+.brand-badge{position:relative;width:48px;height:48px;flex:none}
+.brand-badge .bb-back{position:absolute;top:0;right:0;width:34px;height:34px;border-radius:11px;object-fit:cover;object-position:50% 20%;border:2px solid var(--paper);box-shadow:0 4px 10px rgba(20,24,31,.25);z-index:1;transition:transform .3s cubic-bezier(.2,0,0,1)}
+.brand-badge .bb-front{position:absolute;bottom:0;left:0;width:34px;height:34px;border-radius:11px;object-fit:cover;border:2px solid var(--paper);box-shadow:0 6px 14px rgba(20,24,31,.35);z-index:2;transition:transform .3s cubic-bezier(.2,0,0,1)}
+.brand:hover .bb-back{transform:translate(2px,-2px) scale(1.05)}
+.brand:hover .bb-front{transform:translate(-2px,2px) scale(1.05)}
 .logo{width:46px;height:46px;flex:none;filter:drop-shadow(0 8px 14px rgba(20,24,31,.25))}
 .brand b{display:block;font-size:20px;font-weight:900;line-height:1.1}
 .brand small{font-size:12.5px;color:var(--ink-2);font-weight:600}
@@ -344,7 +349,7 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
 <div class="topbar"><div class="wrap"><span class="tb"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>مدينة نصر · <b>بنخدم القاهرة الكبرى</b></span><span class="hide-m">معاينات يوميًا · رد سريع على الواتساب</span></div></div>
 
 <header class="nav" id="nav"><div class="wrap">
-  <a href="#" class="brand" aria-label="حماده رمضان، نقاش مدينة نصر"><svg class="logo" aria-hidden="true"><use href="#i-logo"/></svg><div><b>نقاش مدينة نصر</b><small>حماده رمضان</small></div></a>
+  <a href="#" class="brand" aria-label="حماده رمضان، نقاش مدينة نصر"><div class="brand-badge" aria-hidden="true"><img class="bb-back" src="img/hamada.webp" width="34" height="34" alt="حماده رمضان"><img class="bb-front" src="img/hero-salon-panels.webp" width="34" height="34" alt="تشطيب شقة"></div><div><b>نقاش مدينة نصر</b><small>حماده رمضان</small></div></a>
   <nav class="menu" aria-label="القائمة"><a href="#services">الخدمات</a><a href="#work">أعمالنا</a><a href="#videos">فيديوهات</a><a href="#faq">أسئلة شائعة</a></nav>
   <a class="btn btn-dark" href="#book">احجز معاينة</a>
 </div></header>
