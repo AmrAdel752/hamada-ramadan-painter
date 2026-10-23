@@ -38,6 +38,8 @@
   "priceRange":"$$",
   "image":["https://hamada-ramadan-painter.vercel.app/img/hero-salon-panels.webp","https://hamada-ramadan-painter.vercel.app/img/parquet-room.webp","https://hamada-ramadan-painter.vercel.app/img/corridor-lighting.webp"],
   "address":{"@type":"PostalAddress","addressLocality":"مدينة نصر","addressRegion":"القاهرة","addressCountry":"EG"},
+  "geo":{"@type":"GeoCoordinates","latitude":30.0566,"longitude":31.3301},
+  "hasMap":"https://www.google.com/maps/search/?api=1&query=%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D9%86%D8%B5%D8%B1",  "sameAs":["https://www.facebook.com/profile.php?id=100013429150615","https://www.youtube.com/@نقاشمقاولاتعامهتشطيب"],
   "areaServed":[{"@type":"Place","name":"مدينة نصر"},{"@type":"Place","name":"مدينه نصر"},{"@type":"City","name":"القاهرة"}],
   "founder":{"@type":"Person","name":"حماده رمضان خلف"},
   "contactPoint":{"@type":"ContactPoint","telephone":"+201064684256","contactType":"customer service","availableLanguage":"ar"},
@@ -97,11 +99,11 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(246,241,233,.88);bac
 header.nav.scrolled{border-color:var(--line);box-shadow:0 10px 30px -18px rgba(20,24,31,.25)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand-badge{position:relative;width:60px;height:46px;flex:none}
-.brand-badge .bb-back{position:absolute;top:0;right:0;width:38px;height:38px;border-radius:12px;object-fit:cover;border:2.5px solid var(--paper);box-shadow:0 6px 14px rgba(20,24,31,.3);z-index:2;transition:transform .3s cubic-bezier(.2,0,0,1)}
-.brand-badge .bb-front{position:absolute;bottom:0;left:0;width:32px;height:32px;border-radius:10px;object-fit:cover;border:2px solid var(--paper);box-shadow:0 4px 10px rgba(20,24,31,.25);z-index:1;transition:transform .3s cubic-bezier(.2,0,0,1)}
-.brand:hover .bb-back{transform:scale(1.06)}
-.brand:hover .bb-front{transform:translate(-2px,2px) scale(1.06)}
+.brand-badge{position:relative;width:76px;height:56px;flex:none}
+.brand-badge .bb-apt{position:absolute;top:5px;right:0;width:44px;height:46px;border-radius:12px;object-fit:cover;border:2px solid var(--paper);box-shadow:0 4px 10px rgba(20,24,31,.25);z-index:1;transition:transform .3s cubic-bezier(.2,0,0,1)}
+.brand-badge .bb-face{position:absolute;top:0;left:0;width:38px;height:56px;border-radius:12px;object-fit:cover;object-position:center top;border:2.5px solid var(--paper);box-shadow:0 6px 14px rgba(20,24,31,.3);z-index:2;transition:transform .3s cubic-bezier(.2,0,0,1)}
+.brand:hover .bb-face{transform:scale(1.06)}
+.brand:hover .bb-apt{transform:translate(2px,0) scale(1.06)}
 .logo{width:46px;height:46px;flex:none;filter:drop-shadow(0 8px 14px rgba(20,24,31,.25))}
 .brand b{display:block;font-size:20px;font-weight:900;line-height:1.1}
 .brand small{font-size:12.5px;color:var(--ink-2);font-weight:600}
@@ -192,6 +194,22 @@ h2{font-size:42px;line-height:1.25;font-weight:900;letter-spacing:-.3px;margin-t
 .v-cap b{display:block;font-size:16.5px;font-weight:900}
 .v-cap small{color:#a9b0bc;font-size:13.5px}
 .v-main .tag,.v .tag{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:900;padding:5px 11px;border-radius:999px;z-index:2;pointer-events:none}
+.v-ba{grid-column:1/-1;margin:16px 0 8px;padding:30px;border-radius:30px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(201,161,90,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 40px 80px -40px rgba(0,0,0,.7)}
+.v-ba-head{text-align:center;margin-bottom:24px}
+.v-ba-head h3{font-size:26px;font-weight:900;color:#fff;margin-top:6px}
+.v-ba-head p{color:#a9b0bc;font-size:14.5px;margin-top:4px}
+.v-ba-pair{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;max-width:720px;margin:0 auto}
+.v-ba-item{margin:0}
+.v-ba-item .v{border:3px solid rgba(255,255,255,.14);border-radius:26px}
+.v-ba-item.after .v{border-color:var(--gold);box-shadow:0 0 0 6px rgba(201,161,90,.14),0 40px 80px -30px rgba(201,161,90,.45)}
+.v-ba-item video{aspect-ratio:9/16}
+.v-ba .ba-label{position:absolute;top:14px;right:14px;z-index:2;pointer-events:none;font-size:14px;font-weight:900;padding:6px 16px;border-radius:999px;letter-spacing:.3px}
+.v-ba .before .ba-label{background:rgba(18,22,29,.85);color:#fff;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px)}
+.v-ba .after .ba-label{background:var(--gold);color:var(--ink)}
+.v-ba-item figcaption{text-align:center;margin-top:14px}
+.v-ba-item figcaption b{display:block;font-size:17px;font-weight:900}
+.v-ba-item figcaption small{color:#a9b0bc;font-size:13.5px}
+.ba-arrow{justify-self:center;width:48px;height:48px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:24px;font-weight:900;box-shadow:0 0 0 8px rgba(201,161,90,.15),0 10px 24px rgba(0,0,0,.4)}
 .yt-facade{position:relative;width:100%;aspect-ratio:9/16;cursor:pointer;display:flex;align-items:center;justify-content:center;background:#05070a;overflow:hidden;user-select:none}
 .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,0,0,1),filter .4s}
 .yt-facade::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,0,0,.1) 0%,rgba(0,0,0,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.25) 0%,transparent 35%,rgba(0,0,0,.75) 100%);pointer-events:none;transition:background .3s}
@@ -304,6 +322,14 @@ footer address{font-style:normal}
   .svc-grid{grid-template-columns:1fr}
   .gal{grid-auto-rows:150px;gap:10px}
   .gal .s-big{grid-row:span 2}
+  .v-ba{padding:20px 12px;border-radius:24px}
+  .v-ba-head h3{font-size:20px}
+  .v-ba-pair{grid-template-columns:1fr 30px 1fr}
+  .v-ba-item .v{border-radius:18px;border-width:2px}
+  .v-ba .ba-label{top:10px;right:10px;font-size:12.5px;padding:4px 12px}
+  .v-ba-item figcaption b{font-size:14.5px}
+  .v-ba-item figcaption small{font-size:12px}
+  .ba-arrow{width:30px;height:30px;font-size:16px;box-shadow:0 0 0 5px rgba(201,161,90,.15)}
   .row{grid-template-columns:1fr}
   .fab{display:none}
   .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
@@ -353,7 +379,7 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
 <div class="topbar"><div class="wrap"><span class="tb"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>مدينة نصر · <b>بنخدم القاهرة الكبرى</b></span><span class="hide-m">معاينات يوميًا · رد سريع على الواتساب</span></div></div>
 
 <header class="nav" id="nav"><div class="wrap">
-  <a href="#" class="brand" aria-label="حماده رمضان، نقاش مدينة نصر"><div class="brand-badge" aria-hidden="true"><img class="bb-back" src="img/hamada-avatar.webp" width="38" height="38" alt="حماده رمضان"><img class="bb-front" src="img/hero-salon-panels.webp" width="32" height="32" alt="تشطيب شقة"></div><div><b>نقاش مدينة نصر</b><small>حماده رمضان</small></div></a>
+  <a href="#" class="brand" aria-label="حماده رمضان، نقاش مدينة نصر"><div class="brand-badge" aria-hidden="true"><img class="bb-apt" src="img/hero-salon-panels.webp" width="44" height="46" alt="تشطيب شقة"><img class="bb-face" src="img/hamada-logo.webp" width="38" height="56" alt="حماده رمضان"></div><div><b>نقاش مدينة نصر</b><small>حماده رمضان</small></div></a>
   <nav class="menu" aria-label="القائمة"><a href="#services">الخدمات</a><a href="#work">أعمالنا</a><a href="#videos">فيديوهات</a><a href="#faq">أسئلة شائعة</a></nav>
   <a class="btn btn-dark" href="#book">احجز معاينة</a>
 </div></header>
@@ -405,6 +431,15 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
 <section class="work" id="work"><div class="wrap">
   <div class="head rv"><div><div class="kicker">أعمالنا</div><h2>شوف شغلنا قبل ما تقرر</h2></div><p>صور حقيقية من شقق اشتغلنا فيها. دوس على أي صورة علشان تكبّرها.</p></div>
   <div class="gal">
+    <figure class="g s-big rv"><img class="cover" src="img/wa-img-16.jpg" width="780" height="1040" alt="أوضة بإضاءة ليد خطية في السقف وباركيه هيرينجبون في مدينة نصر" loading="lazy"><figcaption><b>أوضة كاملة</b><small>ليد خطي وباركيه</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-15.jpg" width="780" height="1040" alt="صالة بعد التشطيب بإضاءة ليد ودهانات حديثة" loading="lazy"><figcaption><b>صالة</b><small>دهانات وإضاءة ليد</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-17.jpg" width="780" height="1040" alt="سقف بإضاءة ليد خطية مودرن" loading="lazy"><figcaption><b>سقف مودرن</b><small>ليد خطي</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-20.jpg" width="780" height="1040" alt="أوضة بسقف ليد وباركيه بعد التلميع" loading="lazy"><figcaption><b>أوضة</b><small>سقف ليد وباركيه</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-18.jpg" width="780" height="1040" alt="باركيه هيرينجبون لامع بعد التلميع" loading="lazy"><figcaption><b>باركيه هيرينجبون</b><small>بعد التلميع</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-19.jpg" width="780" height="1040" alt="أوضة بعد التشطيب والدهان وتلميع الباركيه" loading="lazy"><figcaption><b>أوضة</b><small>دهان وباركيه</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-21.jpg" width="780" height="1040" alt="باركيه بعد الصنفرة والتلميع" loading="lazy"><figcaption><b>باركيه</b><small>صنفرة وتلميع</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-22.jpg" width="780" height="1040" alt="أوضة فاضية بعد التشطيب بباركيه هيرينجبون" loading="lazy"><figcaption><b>أوضة نوم</b><small>تشطيب نهائي</small></figcaption></figure>
+    <figure class="g  rv"><img class="cover" src="img/wa-img-23.jpg" width="780" height="1040" alt="حمام بعد التشطيب بسيراميك رمادي" loading="lazy"><figcaption><b>حمام</b><small>تشطيب كامل</small></figcaption></figure>
     <figure class="g  rv"><img class="cover" src="img/new-corridor-led.jpg" width="780" height="1040" alt="طرقة بإضاءة ليد خطية في السقف" loading="lazy"><figcaption><b>طرقة</b><small>إضاءة ليد</small></figcaption></figure>
     <figure class="g  rv"><img class="cover" src="img/new-parquet-office.jpg" width="780" height="1040" alt="باركيه هيرينجبون في أوضة" loading="lazy"><figcaption><b>باركيه هيرينجبون</b><small>أوضة</small></figcaption></figure>
     <figure class="g  rv"><img class="cover" src="img/new-corridor-lights.jpg" width="780" height="1040" alt="طرقة بعد التشطيب مع إضاءة سقف دائرية" loading="lazy"><figcaption><b>طرقة</b><small>إضاءة سقف</small></figcaption></figure>
@@ -467,13 +502,19 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
       <div class="v"><video class="auto" src="video/sanding.mp4" poster="video/sanding.webp" muted loop playsinline preload="none" width="478" height="850"></video></div>
       <div class="v-cap"><b>صنفرة بالماكينة</b><small>علشان حيطة مستوية تمامًا</small></div>
     </div>
-    <div class="rv">
-      <div class="v"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg>بعد التشطيب</span><video src="video/wa-vid-01.mp4" controls playsinline preload="metadata" width="478" height="850"></video></div>
-      <div class="v-cap"><b>شقة بعد التشطيب</b><small>الشغل النهائي</small></div>
-    </div>
-    <div class="rv">
-      <div class="v"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg>قبل التشطيب</span><video src="video/apartment-tour.mp4" poster="video/apartment-tour.webp" controls playsinline preload="none" width="478" height="850"></video></div>
-      <div class="v-cap"><b>شقة قبل التشطيب</b><small>جولة قبل ما نبدأ</small></div>
+    <div class="v-ba rv">
+      <div class="v-ba-head"><div class="kicker" style="color:var(--gold)">قبل وبعد</div><h3>نفس الشقة.. قبل ما نبدأ وبعد ما سلّمناها</h3><p>شغّل الفيديوهين وشوف الفرق بنفسك</p></div>
+      <div class="v-ba-pair">
+        <figure class="v-ba-item before">
+          <div class="v"><span class="ba-label">قبل</span><video src="video/apartment-tour.mp4" poster="video/apartment-tour.webp" controls playsinline preload="none" width="478" height="850"></video></div>
+          <figcaption><b>شقة قبل التشطيب</b><small>جولة قبل ما نبدأ</small></figcaption>
+        </figure>
+        <div class="ba-arrow" aria-hidden="true">&larr;</div>
+        <figure class="v-ba-item after">
+          <div class="v"><span class="ba-label">بعد</span><video src="video/wa-vid-01.mp4" controls playsinline preload="metadata" width="478" height="850"></video></div>
+          <figcaption><b>شقة بعد التشطيب</b><small>الشغل النهائي</small></figcaption>
+        </figure>
+      </div>
     </div>
     <div class="rv">
       <div class="v"><video class="auto" src="video/wa-vid-02.mp4" muted loop playsinline preload="none" width="478" height="850"></video></div>
@@ -586,6 +627,11 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
   </div>
 </div></section>
 </main>
+
+<section class="areas" aria-labelledby="areas-h" style="padding:44px 0;background:var(--paper);border-top:1px solid var(--line)"><div class="wrap" style="max-width:900px;text-align:center">
+  <h2 id="areas-h" style="font-size:24px;margin-bottom:10px">نقاش في مدينة نصر وكل أحيائها</h2>
+  <p style="color:var(--ink-2);font-size:15px;line-height:1.9">لو بتدور على <strong>نقاش في مدينة نصر</strong> شاطر وأمين، حماده رمضان بيشتغل في تشطيب الشقق والدهانات الحديثة وتلميع الباركيه ومعجون وصنفرة الحوائط وديكورات الأسقف والإضاءة الليد. بنخدم عباس العقاد، مكرم عبيد، مصطفى النحاس، الطيران، الحي السابع، الحي الثامن، الحي العاشر، الواحة، زهراء مدينة نصر، المنطقة السادسة وأول وتاني مكرم، وكمان مصر الجديدة والتجمع وباقي القاهرة. المعاينة بالاتفاق على واتساب <a href="https://wa.me/201064684256" style="color:var(--accent-d);font-weight:800" dir="ltr">01064684256</a>.</p>
+</div></section>
 
 <footer><div class="wrap"><address><b style="color:var(--ink)">حماده رمضان خلف</b> · نقاش · تشطيب شقق ودهانات وتلميع باركيه · مدينة نصر، القاهرة · <a href="tel:+201064684256" dir="ltr">01064684256</a></address>
 <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">

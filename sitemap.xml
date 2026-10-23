@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://hamada-ramadan-painter.vercel.app/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/hero-salon-panels.webp</image:loc></image:image>
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/parquet-room.webp</image:loc></image:image>
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/corridor-lighting.webp</image:loc></image:image>
@@ -11,6 +11,15 @@
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/parquet-balcony.webp</image:loc></image:image>
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/arch-niche.webp</image:loc></image:image>
     <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/stairs-paint.webp</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-16.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-15.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-17.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-20.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-18.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-19.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-21.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-22.jpg</image:loc></image:image>
+    <image:image><image:loc>https://hamada-ramadan-painter.vercel.app/img/wa-img-23.jpg</image:loc></image:image>
     <video:video>
       <video:thumbnail_loc>https://hamada-ramadan-painter.vercel.app/video/apartment-tour.webp</video:thumbnail_loc>
       <video:title>جولة في شقة بعد التشطيب - حماده رمضان نقاش مدينة نصر</video:title>
