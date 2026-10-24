@@ -285,6 +285,36 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--ink-2);font-s
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
 footer address{font-style:normal}
 
+/* designer credit */
+.dev{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 50% 0%,#16203d 0%,#0a1124 55%,#060b18 100%);color:#c9ced8;padding:46px 0 40px}
+.dev::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#e9cf9a 30%,#c0c6d0 70%,transparent)}
+.dev::after{content:'';position:absolute;top:-160px;left:50%;width:520px;height:320px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(233,207,154,.16),transparent);pointer-events:none}
+.dev-card{position:relative;z-index:1;max-width:900px;margin:0 auto;display:flex;align-items:center;gap:26px;padding:24px 28px;border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(233,207,154,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 30px 60px -30px rgba(0,0,0,.8);backdrop-filter:blur(6px)}
+.dev-logo{position:relative;flex:none;width:92px;height:92px;border-radius:50%;padding:3px;background:conic-gradient(from 210deg,#f3dca6,#b8862f,#e6e9ee,#8d939c,#f3dca6);box-shadow:0 0 0 6px rgba(233,207,154,.07),0 14px 34px -8px rgba(233,207,154,.35);transition:transform .6s cubic-bezier(.2,0,0,1)}
+.dev-logo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;background:#0a1124}
+.dev-card:hover .dev-logo{transform:rotate(-8deg) scale(1.05)}
+.dev-txt{flex:1;min-width:0}
+.dev-k{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:2px;color:#9aa3b2;margin-bottom:4px}
+.dev-name{display:block;font-size:30px;font-weight:900;line-height:1.25;background:linear-gradient(100deg,#f6e2b0 0%,#d4a24f 40%,#f6e2b0 55%,#c8ccd4 80%,#eef0f3 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:devShine 7s linear infinite}
+@keyframes devShine{to{background-position:-200% 0}}
+.dev-tag{margin-top:6px;font-size:14.5px;color:#b5bcc8;line-height:1.7}
+.dev-btns{display:flex;flex-direction:column;gap:10px;flex:none}
+.dev-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 20px;border-radius:999px;font-weight:800;font-size:14.5px;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s;white-space:nowrap}
+.dev-btn svg{width:18px;height:18px;flex:none}
+.dev-btn.gold{background:linear-gradient(135deg,#f3dca6,#c9963f);color:#0a1124;box-shadow:0 10px 24px -10px rgba(233,190,110,.7)}
+.dev-btn.gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(233,190,110,.85)}
+.dev-btn.line{border:1px solid rgba(200,204,212,.45);color:#eef0f3;background:rgba(255,255,255,.03)}
+.dev-btn.line:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.dev-copy{position:relative;z-index:1;text-align:center;margin-top:20px;font-size:12.5px;color:#6f7889;letter-spacing:.3px}
+@media (max-width:760px){
+  .dev{padding:38px 0 34px}
+  .dev-card{flex-direction:column;text-align:center;gap:16px;padding:26px 20px}
+  .dev-name{font-size:26px}
+  .dev-btns{flex-direction:row;flex-wrap:wrap;justify-content:center;width:100%}
+  .dev-btn{flex:1 1 140px}
+}
+@media (prefers-reduced-motion:reduce){.dev-name{animation:none}}
+
 .fab{position:fixed;bottom:22px;left:22px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(31,168,85,.7);animation:pulse 2.4s infinite}
 .fab svg{width:30px;height:30px;fill:#fff}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,168,85,.5)}70%{box-shadow:0 0 0 18px rgba(31,168,85,0)}100%{box-shadow:0 0 0 0 rgba(31,168,85,0)}}
@@ -646,6 +676,22 @@ form .hint .i{width:15px;height:15px;color:var(--accent)}.secure .i{width:14px;h
   <span>© 2026</span>
 </div>
 </div></footer>
+
+<aside class="dev" aria-label="مصمم الموقع"><div class="wrap">
+  <div class="dev-card">
+    <div class="dev-logo"><img src="img/amr-logo.webp" width="86" height="86" alt="لوجو م. عمرو عادل" loading="lazy"></div>
+    <div class="dev-txt">
+      <span class="dev-k">تصميم وتطوير الموقع</span>
+      <b class="dev-name">م. عمرو عادل</b>
+      <p class="dev-tag">عايز موقع احترافي لشغلك زي ده؟ كلّمني وأنا أعملهولك بتصميم شيك ويظهر على جوجل.</p>
+    </div>
+    <div class="dev-btns">
+      <a class="dev-btn gold" href="https://wa.me/201148164929?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85.%20%D8%B9%D9%85%D8%B1%D9%88%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>كلّمني واتساب</a>
+      <a class="dev-btn line" href="tel:+201148164929"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><span dir="ltr">01148164929</span></a>
+    </div>
+  </div>
+  <p class="dev-copy">Designed &amp; Developed by Eng. Amr Adel · © 2026</p>
+</div></aside>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصورة"><button type="button" aria-label="إغلاق"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button><img alt=""></div>
 
